@@ -41,3 +41,7 @@ li{
   margin: 5px;
   height: auto;
 }
+.map{
+  text-align: center;
+  display: flex;
+}

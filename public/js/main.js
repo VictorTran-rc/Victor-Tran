@@ -33,7 +33,7 @@ $(window).on('load', function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
-	
+
 	/*------------------
 		Hero Slider
 	--------------------*/

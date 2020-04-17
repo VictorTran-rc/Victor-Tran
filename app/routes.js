@@ -7,25 +7,72 @@ module.exports = function(app, passport, db) {
     //Result
     app.get('/', function(req, res) {
         //tells us what page to render in the dom
-        res.render('index.ejs');
+        res.render('index.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
     });
     app.get('/index', function(req, res) {
         //tells us what page to render in the dom
-        res.render('index.ejs');
+        res.render('index.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
     });
 //home page to tabs link
     app.get('/favorites', function(req, res) {
         //tells us what page to render in the dom
-        res.render('favorites.ejs');
+        res.render('favorites.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
     });
     app.get('/nearby', function(req, res) {
         //tells us what page to render in the dom
-        res.render('nearby.ejs');
+        res.render('nearby.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
     });
     app.get('/browse', function(req, res) {
         //tells us what page to render in the dom
-        res.render('browse.ejs');
+        res.render('browse.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
     });
+
+  app.get('/blueline', function (req, res) {
+    //tells us what page to render in the dom
+    res.render('blueline.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
+  });
+
+  app.get('/redline', function (req, res) {
+    //tells us what page to render in the dom
+    res.render('redline.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
+  });
+
+  app.get('/greenline', function (req, res) {
+    //tells us what page to render in the dom
+    res.render('greenline.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
+  });
+
+  app.get('/orangeline', function (req, res) {
+    //tells us what page to render in the dom
+    res.render('orangeline.ejs', {
+            user : req.user,
+            isLoggedIn: (req.user != null)?(true):(false)
+          });
+  });
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
@@ -37,7 +84,8 @@ module.exports = function(app, passport, db) {
           //conditional console logged for error
           res.render('profile.ejs', {
             user : req.user,
-            messages: result
+            messages: result,
+            isLoggedIn: (req.user != null)?(true):(false)
           })
         })
     });

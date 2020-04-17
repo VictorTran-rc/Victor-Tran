@@ -48,8 +48,12 @@
 
 			<li><a href="nearby">Nearby</a></li>
 			<li><a href="browse">Browse</a></li>
-			<li><a href="/login" class="btn btn-default"><span></span>Login</a></li>
-			<li><a href="/signup" class="btn btn-default"><span></span>Signup</a></li>
+			<% if(isLoggedIn) { %>
+			<li><a href="logout">Log Out</a></li>
+			<% } else { %>
+			<li><a href="login">Login</a></li>
+			<li><a href="signup">Sign Up</a></li>
+			<% } %>
 		</ul>
 		<div class="header-add">
 			<img src="img/author-thumbs/train.png" width="55%" alt="">
@@ -70,25 +74,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<!-- <div class="blog-post review-post">
-						<img src="img/game-review/1.jpg" alt="">
-						<div class="post-date">April 1, 2019</div>
-						<h3>The Quest 2019 </h3>
-						<div class="post-metas">
-							<div class="post-meta">By Admin</div>
-							<div class="post-meta">in <a href="#">Games</a></div>
-							<div class="post-meta">3 Comments</div>
-						</div>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. </p>
-						<a href="#" class="site-btn">Read More</a>
-					</div> -->
 					<div class="blog-post review-post">
 						<img src="img/map.png" alt="">
 						<ul>
@@ -253,46 +238,6 @@
 								<img src="img/add-2.jpg" alt="">
 							</a>
 						</div>
-						<!-- <div class="sb-widget">
-						<h2 class="sb-title">Latest Comments</h2>
-						<div class="latest-comments-widget">
-							<div class="lc-item">
-								<img src="img/author-thumbs/1.jpg" alt="">
-								<div class="lc-text">
-									<h6>Jane Smith<span> In </span><a href="">The best 2019 Games</a></h6>
-									<div class="lc-date">April 1,2019</div>
-								</div>
-							</div>
-							<div class="lc-item">
-								<img src="img/author-thumbs/2.jpg" alt="">
-								<div class="lc-text">
-									<h6>Michael James<span> In </span><a href="">The best 2019 Games</a></h6>
-									<div class="lc-date">April 1,2019</div>
-								</div>
-							</div>
-							<div class="lc-item">
-								<img src="img/author-thumbs/3.jpg" alt="">
-								<div class="lc-text">
-									<h6>Jane Smith<span> In </span><a href="">The best 2019 Games</a></h6>
-									<div class="lc-date">April 1,2019</div>
-								</div>
-							</div>
-							<div class="lc-item">
-								<img src="img/author-thumbs/4.jpg" alt="">
-								<div class="lc-text">
-									<h6>Michael James<span> In </span><a href="">The best 2019 Games</a></h6>
-									<div class="lc-date">April 1,2019</div>
-								</div>
-							</div>
-							<div class="lc-item">
-								<img src="img/author-thumbs/1.jpg" alt="">
-								<div class="lc-text">
-									<h6>Jane Smith<span> In </span><a href="">The best 2019 Games</a></h6>
-									<div class="lc-date">April 1,2019</div>
-								</div>
-							</div>
-						</div>
-					</div> -->
 					</div>
 				</div>
 			</div>
@@ -347,35 +292,6 @@
 						</ul>
 					</div>
 				</div>
-				<!-- <div class="col-lg-3 col-sm-6">
-					<div class="footer-widget fw-latest-post">
-						<h2 class="fw-title">Usfull Links</h2>
-						<div class="latest-news-widget">
-							<div class="ln-item">
-								<div class="ln-text">
-									<div class="ln-date">April 1, 2019</div>
-									<h6>10 Amazing new games</h6>
-									<div class="ln-metas">
-										<div class="ln-meta">By Admin</div>
-										<div class="ln-meta">in <a href="#">Games</a></div>
-										<div class="ln-meta">3 Comments</div>
-									</div>
-								</div>
-							</div>
-							<div class="ln-item">
-								<div class="ln-text">
-									<div class="ln-date">April 1, 2019</div>
-									<h6>10 Amazing new games</h6>
-									<div class="ln-metas">
-										<div class="ln-meta">By Admin</div>
-										<div class="ln-meta">in <a href="#">Games</a></div>
-										<div class="ln-meta">3 Comments</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 			<div class="copyright">
 				<p>
